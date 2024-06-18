@@ -39,6 +39,17 @@ var x = setInterval(function() {
   }
 }, 1000);
 </script>
+    <script>
+        function AA(){
+            const A = document.getElementById('Hello')
+            const B = document.createTextNode('Hello World')
+            const C = document.createElement('H1')
+            A.appendChild(C)
+            C.appendChild(B)
+        }
+    </script>
+    <button onclick="AA()">Hello</button>
+    <div id="Hello"></div>
 
 </body>
 </html>
