@@ -57,18 +57,18 @@
   .carousel {
     width: 100%;
     overflow: hidden;
+    padding: 40px 0;
     display: flex;
     justify-content: center;
     perspective: 500px; /* Tambahkan efek kedalaman */
     background: #f0f0f0;
-    padding: 40px 0;
   }
 
   /* Track yang berisi gambar */
   .carousel-track {
     display: flex;
     gap: 20px;
-    animation: scroll 6s linear infinite; /* Animasi berjalan terus */
+    animation: scroll 10s linear infinite;
   }
 
   /* Gambar dalam carousel */
@@ -79,13 +79,17 @@
     transition: transform 0.5s ease-in-out;
   }
 
-  /* Efek gulungan */
+  /* Efek menggulung */
   .carousel-track img:nth-child(1) { transform: rotateY(-20deg) translateZ(-50px); }
   .carousel-track img:nth-child(2) { transform: rotateY(0deg) translateZ(0px); }
-  .carousel-track img:nth-child(3) { transform: rotateY(20deg) translateZ(-50px); }
+  .carousel-track img:nth-child(3) { transform: rotateY(-20deg) translateZ(-50px); }
 
-  /* Animasi bergerak dari kiri ke kanan */
+  /* Animasi scrolling */
   @keyframes scroll {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-100%); }
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(100%);
+    }
   }
