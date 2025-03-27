@@ -1,7 +1,10 @@
 /*container*/
 #container {
 	display: flex;
+	align-items: center;
+	text-align: center;
 	justify-content: center;
+	flex-direction: column;
 }
 
 /* From Uiverse.io by e-coders */ 
@@ -48,3 +51,41 @@
  transform: translateY(0);
 }
 
+
+/*FOTO GULIR */
+ /* Container utama */
+  .carousel {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    perspective: 500px; /* Tambahkan efek kedalaman */
+    background: #f0f0f0;
+    padding: 40px 0;
+  }
+
+  /* Track yang berisi gambar */
+  .carousel-track {
+    display: flex;
+    gap: 20px;
+    animation: scroll 6s linear infinite; /* Animasi berjalan terus */
+  }
+
+  /* Gambar dalam carousel */
+  .carousel-track img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  /* Efek gulungan */
+  .carousel-track img:nth-child(1) { transform: rotateY(-20deg) translateZ(-50px); }
+  .carousel-track img:nth-child(2) { transform: rotateY(0deg) translateZ(0px); }
+  .carousel-track img:nth-child(3) { transform: rotateY(20deg) translateZ(-50px); }
+
+  /* Animasi bergerak dari kiri ke kanan */
+  @keyframes scroll {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+  }
