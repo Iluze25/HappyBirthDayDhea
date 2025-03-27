@@ -1,3 +1,9 @@
+/*container*/
+#container {
+	display: flex;
+	justify-content: center;
+}
+
 /* From Uiverse.io by e-coders */ 
 #countdown {
  appearance: none;

@@ -24,4 +24,13 @@ document.getElementById("countdown").innerHTML =
 }, 1000);
 
 
+function alertCountdown() {
+    const tanggal = new Date("Maret 30, 2025 00:00:00").getTime();
+    const now = new Date().getTime();
+    const distance = targetDate - now;
 
+    if (distance > 0) {
+        alert("Tunggu dulu ya Dhea !! :)")
+    }
+
+}
